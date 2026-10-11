@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaX Exchange — Interactive Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast" class="toast"></div>
+<div id="loginScreen" class="login-screen">
+  <div class="login-brand"><div class="brand-mark">N</div><div><b>NOVAX</b><small> DIGITAL ASSET EXCHANGE</small></div></div>
+  <div class="login-card">
+    <div class="eyebrow">INTERACTIVE CLIENT DEMO</div>
+    <h1>Exchange control, <span>reimagined.</span></h1>
+    <p class="muted">Explore both sides of the platform. All activity is simulated locally for demonstration.</p>
+    <div class="login-tabs"><button class="tab active" data-login="user">User dashboard</button><button class="tab" data-login="admin">Admin panel</button></div>
+    <form id="loginForm">
+      <label>Email / username</label><input id="loginName" value="alex@novax.demo" required>
+      <label>Password</label><input id="loginPassword" type="password" value="demo123" required>
+      <button class="primary full" type="submit">Enter demo <span>↗</span></button>
+    </form>
+    <div class="demo-credentials"><span>USER</span> alex@novax.demo / demo123 <span>ADMIN</span> admin@novax.demo / admin123</div>
+    <div class="demo-warning">Demo environment · No real crypto, blockchain, wallet or investment product is connected.</div>
+  </div>
+</div>
+
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <div class="side-brand"><div class="brand-mark">N</div><div><b>NOVAX</b><small>EXCHANGE</small></div></div>
+    <div class="workspace-label" id="workspaceLabel">PERSONAL WORKSPACE</div>
+    <nav id="navigation"></nav>
+    <div class="sidebar-bottom"><div class="security-pill"><i></i><div><b>Demo system online</b><small>Local simulation only</small></div></div><button id="switchRole" class="switch-role">⇄ Switch dashboard</button></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar"><div class="mobile-brand">NOVA<span>X</span></div><div class="crumb" id="breadcrumb">Overview <span>/</span> Dashboard</div><div class="top-actions"><button class="icon-btn" id="notifButton" title="Notifications">♧<em id="notifCount">0</em></button><div class="user-mini"><div class="avatar" id="avatar">AK</div><div><b id="currentName">Alex Kim</b><small id="currentRole">Verified user</small></div></div><button class="logout" id="logoutBtn">Log out</button></div></header>
+    <div class="market-ticker" id="marketTicker" aria-label="Simulated market ticker">
+  <div class="ticker-live"><i></i><span>DEMO MARKET</span></div>
+  <div class="ticker-item"><b>₿ BTC / USDT</b><strong id="tickerBTC">67,248.20</strong><em class="up">+2.41%</em></div>
+  <div class="ticker-item"><b>Ξ ETH / USDT</b><strong id="tickerETH">3,482.16</strong><em class="up">+1.28%</em></div>
+  <div class="ticker-item"><b>◎ SOL / USDT</b><strong id="tickerSOL">182.74</strong><em class="down">−0.36%</em></div>
+  <div class="ticker-item"><b>◉ BNB / USDT</b><strong id="tickerBNB">602.83</strong><em class="up">+0.84%</em></div>
+  <div class="ticker-disclaimer">SIMULATED PRICES · NOT LIVE EXCHANGE DATA</div>
+</div>
+<section class="page-wrap"><div id="pageContent"></div></section>
+    <footer>NovaX interactive prototype <span>·</span> Demo data only <span>·</span> Not connected to a live exchange</footer>
+  </main>
+</div>
+<div id="modalRoot"></div>
+<script src="script.js"></script>
+</body></html>
